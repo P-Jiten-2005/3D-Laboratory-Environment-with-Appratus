@@ -29,5 +29,7 @@ public class FlameSensor : MonoBehaviour
         if (spoon == null) return;
 
         flame.ResetFlame();
+
+        spoon.ClearSalt();
     }
 }
