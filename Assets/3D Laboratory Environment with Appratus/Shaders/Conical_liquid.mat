@@ -1,5 +1,18 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!114 &-8162213960104956983
+MonoBehaviour:
+  m_ObjectHideFlags: 11
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0353a89b1f911e48b9e16bdc9f2e058, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Unity.RenderPipelines.Universal.Editor::UnityEditor.Rendering.Universal.AssetVersion
+  version: 10
 --- !u!21 &2100000
 Material:
   serializedVersion: 8
@@ -7,7 +20,7 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: ConicalFlask_liquid
+  m_Name: Conical_liquid
   m_Shader: {fileID: -6465566751694194690, guid: e9d39a1c538c8bb42a94c424bb5053fa, type: 3}
   m_Parent: {fileID: 0}
   m_ModifiedSerializedProperties: 0
@@ -38,25 +51,12 @@ Material:
         m_Offset: {x: 0, y: 0}
     m_Ints: []
     m_Floats:
-    - _FillVolume: 1
+    - _FillVolume: 0.423
     - _QueueControl: 0
     - _QueueOffset: 0
     m_Colors:
-    - _InsideColor: {r: 0.6037736, g: 0.025631888, b: 0.025631888, a: 1}
-    - _ObjectHeight: {r: -0.01, g: 0.12, b: 0, a: 0}
-    - _OutsideColor: {r: 0.56181026, g: 0.7573202, b: 0.9528302, a: 0.5372549}
+    - _InsideColor: {r: 0.5597484, g: 0.029923618, b: 0.029923618, a: 1}
+    - _ObjectHeight: {r: -0.01, g: 0.11, b: 0, a: 0}
+    - _OutsideColor: {r: 0.61006284, g: 0.017265825, b: 0.017265825, a: 1}
   m_BuildTextureStacks: []
   m_AllowLocking: 1
---- !u!114 &5074166111192843617
-MonoBehaviour:
-  m_ObjectHideFlags: 11
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d0353a89b1f911e48b9e16bdc9f2e058, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Unity.RenderPipelines.Universal.Editor::UnityEditor.Rendering.Universal.AssetVersion
-  version: 10

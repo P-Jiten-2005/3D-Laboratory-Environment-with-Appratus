@@ -38,16 +38,16 @@ Material:
         m_Offset: {x: 0, y: 0}
     m_Ints: []
     m_Floats:
-    - _FillVolume: 1
+    - _FillVolume: 0
     - _QueueControl: 0
     - _QueueOffset: 0
     m_Colors:
-    - _InsideColor: {r: 0.6037736, g: 0.025631888, b: 0.025631888, a: 1}
-    - _ObjectHeight: {r: -1.04, g: -0.84, b: 0, a: 0}
-    - _OutsideColor: {r: 0.6132076, g: 0.031817377, b: 0.031817377, a: 1}
+    - _InsideColor: {r: 0.55345905, g: 0.036549106, b: 0.036549106, a: 1}
+    - _ObjectHeight: {r: -0.01, g: 0.19, b: 0, a: 0}
+    - _OutsideColor: {r: 0.42138356, g: 0.022526763, b: 0.022526763, a: 1}
   m_BuildTextureStacks: []
   m_AllowLocking: 1
---- !u!114 &5074166111192843617
+--- !u!114 &1927653071012281457
 MonoBehaviour:
   m_ObjectHideFlags: 11
   m_CorrespondingSourceObject: {fileID: 0}
