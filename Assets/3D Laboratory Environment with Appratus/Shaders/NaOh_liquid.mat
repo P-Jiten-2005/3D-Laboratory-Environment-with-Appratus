@@ -7,7 +7,7 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Testtube_liquid 1
+  m_Name: NaOh_liquid
   m_Shader: {fileID: -6465566751694194690, guid: e9d39a1c538c8bb42a94c424bb5053fa, type: 3}
   m_Parent: {fileID: 0}
   m_ModifiedSerializedProperties: 0
