@@ -12,24 +12,36 @@ public class FlameController : MonoBehaviour
     public void SetPotassium()
     {
         var main = ps.main;
-        main.startColor = new Color(0.8f, 0.4f, 1f);
+
+        // Lilac
+        main.startColor = new Color(0.85f, 0.65f, 1.0f);
     }
 
     public void SetBarium()
     {
         var main = ps.main;
-        main.startColor = Color.green;
+
+        // Apple Green
+        main.startColor = new Color(0.6f, 1.0f, 0.2f);
     }
 
     public void SetCalcium()
     {
         var main = ps.main;
-        main.startColor = new Color(1f, 0.4f, 0.2f);
+
+        // Bright Orange-Red
+        main.startColor = new Color(1.0f, 0.45f, 0.15f);
     }
 
     public void ResetFlame()
     {
         var main = ps.main;
-        main.startColor = Color.white;
+
+        // Original burner blue
+        main.startColor = new Color(
+            11f / 255f,
+            73f / 255f,
+            184f / 255f
+        );
     }
 }
