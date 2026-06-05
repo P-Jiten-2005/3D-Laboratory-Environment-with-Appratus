@@ -7,7 +7,7 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Testtube_liquid
+  m_Name: NaOh_liquid
   m_Shader: {fileID: -6465566751694194690, guid: e9d39a1c538c8bb42a94c424bb5053fa, type: 3}
   m_Parent: {fileID: 0}
   m_ModifiedSerializedProperties: 0
@@ -38,13 +38,13 @@ Material:
         m_Offset: {x: 0, y: 0}
     m_Ints: []
     m_Floats:
-    - _FillVolume: 1
+    - _FillVolume: 0.537
     - _QueueControl: 0
     - _QueueOffset: 0
     m_Colors:
-    - _InsideColor: {r: 0.55345905, g: 0.036549106, b: 0.036549106, a: 1}
-    - _ObjectHeight: {r: -0.01, g: 0.19, b: 0, a: 0}
-    - _OutsideColor: {r: 0.42138356, g: 0.022526763, b: 0.022526763, a: 1}
+    - _InsideColor: {r: 0.24528301, g: 0.244126, b: 0.244126, a: 1}
+    - _ObjectHeight: {r: -0.01, g: 0.238, b: 0, a: 0}
+    - _OutsideColor: {r: 0.3113517, g: 0.31065324, b: 0.3679245, a: 1}
   m_BuildTextureStacks: []
   m_AllowLocking: 1
 --- !u!114 &1927653071012281457
