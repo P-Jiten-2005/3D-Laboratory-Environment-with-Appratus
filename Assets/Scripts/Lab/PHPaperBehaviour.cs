@@ -16,24 +16,17 @@ public class PHPaperBehaviour : MonoBehaviour
 
     void OnTriggerEnter(Collider other)
     {
-        Debug.Log("Paper touched: " + other.name);
-
         if (alreadyDipped) return;
 
         var chemData = other.GetComponentInParent<LabItemData>();
 
-        if (chemData == null)
-        {
-            Debug.Log("No LabItemData found");
-            return;
-        }
-
-        Debug.Log("Chemical found: " + chemData.chemicalName);
-        Debug.Log("pH = " + chemData.pHValue);
+        if (chemData == null) return;
 
         alreadyDipped = true;
 
         paperRenderer.material.color = GetPHColor(chemData.pHValue);
+
+        //FindFirstObjectByType<NaOHExperiment>()?.OnPaperDipped(chemData);
     }
 
     Color GetPHColor(float pH)
