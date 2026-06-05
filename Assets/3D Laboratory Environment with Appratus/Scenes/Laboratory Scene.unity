@@ -6191,6 +6191,10 @@ PrefabInstance:
       value: Liquid
       objectReference: {fileID: 0}
     - target: {fileID: 8482147909517439867, guid: 82efbd6f209a6ab4c8e561fcd37a4810, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8482147909517439867, guid: 82efbd6f209a6ab4c8e561fcd37a4810, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 64
       objectReference: {fileID: 0}
@@ -7814,6 +7818,19 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 9150597809499253185, guid: 82efbd6f209a6ab4c8e561fcd37a4810, type: 3}
   m_PrefabInstance: {fileID: 8752690095393974081}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &425393130
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 425393113}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3731d694186942d4d9fc05102aabcf3f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::FlaskRotationLimiter
+  maxTilt: 85
 --- !u!1001 &426059782
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -49292,6 +49309,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 8482147909517439867, guid: 82efbd6f209a6ab4c8e561fcd37a4810, type: 3}
       insertIndex: -1
       addedObject: {fileID: 425393125}
+    - targetCorrespondingSourceObject: {fileID: 8482147909517439867, guid: 82efbd6f209a6ab4c8e561fcd37a4810, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 425393130}
   m_SourcePrefab: {fileID: 100100000, guid: 82efbd6f209a6ab4c8e561fcd37a4810, type: 3}
 --- !u!33 &8855223848330041184
 MeshFilter:
