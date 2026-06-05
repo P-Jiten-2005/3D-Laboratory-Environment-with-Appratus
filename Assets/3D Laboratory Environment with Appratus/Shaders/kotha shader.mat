@@ -7,13 +7,13 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: ConicalFlask_liquid
-  m_Shader: {fileID: -6465566751694194690, guid: e9d39a1c538c8bb42a94c424bb5053fa, type: 3}
+  m_Name: kotha shader
+  m_Shader: {fileID: -6465566751694194690, guid: ddd3f6579b656f0468ea8912c6f95126, type: 3}
   m_Parent: {fileID: 0}
   m_ModifiedSerializedProperties: 0
   m_ValidKeywords: []
   m_InvalidKeywords: []
-  m_LightmapFlags: 4
+  m_LightmapFlags: 2
   m_EnableInstancingVariants: 0
   m_DoubleSidedGI: 0
   m_CustomRenderQueue: -1
@@ -38,16 +38,19 @@ Material:
         m_Offset: {x: 0, y: 0}
     m_Ints: []
     m_Floats:
-    - _FillVolume: 1
+    - _EdgeSmoothness: 0.02
+    - _FillLevel: 0.1
+    - _LiquidOpacity: 0.85
     - _QueueControl: 0
     - _QueueOffset: 0
+    - _SurfaceBrightness: 1.4
+    - _WaveHeight: 0.015
+    - _WaveSpeed: 1.5
     m_Colors:
-    - _InsideColor: {r: 0.6037736, g: 0.025631888, b: 0.025631888, a: 1}
-    - _ObjectHeight: {r: -0.01, g: 0.12, b: 0, a: 0}
-    - _OutsideColor: {r: 0.56181026, g: 0.7573202, b: 0.9528302, a: 0.5372549}
+    - _LiquidColor: {r: 0.52994335, g: 0.6203887, b: 0.72327036, a: 1}
   m_BuildTextureStacks: []
   m_AllowLocking: 1
---- !u!114 &5074166111192843617
+--- !u!114 &3018967805614284910
 MonoBehaviour:
   m_ObjectHideFlags: 11
   m_CorrespondingSourceObject: {fileID: 0}
