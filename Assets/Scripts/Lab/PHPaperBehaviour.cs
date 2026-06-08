@@ -48,6 +48,7 @@ public class PHPaperBehaviour : MonoBehaviour
         {
             Debug.LogWarning("Result Panel not assigned!");
         }
+        Invoke(nameof(RemovePaper), 5f);
     }
 
     Color GetPHColor(float pH)
@@ -65,5 +66,16 @@ public class PHPaperBehaviour : MonoBehaviour
             return new Color(0.2f, 0.5f, 1.0f);
 
         return new Color(0.6f, 0.0f, 0.8f);
+    }
+    void RemovePaper()
+    {
+        PaperSpawner spawner = FindFirstObjectByType<PaperSpawner>();
+
+        if (spawner != null)
+        {
+            spawner.ClearPaper();
+        }
+
+        Destroy(gameObject);
     }
 }
