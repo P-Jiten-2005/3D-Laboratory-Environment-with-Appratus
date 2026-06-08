@@ -30,7 +30,7 @@ public class FlameController : MonoBehaviour
         var main = ps.main;
 
         // Bright Orange-Red
-        main.startColor = new Color(1.0f, 0.45f, 0.15f);
+        main.startColor = new Color(0.67f, 0.29f, 0.27f);
     }
 
     public void ResetFlame()
