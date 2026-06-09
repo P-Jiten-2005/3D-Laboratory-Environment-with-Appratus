@@ -7,37 +7,64 @@ public class FlameController : MonoBehaviour
     void Start()
     {
         ps = GetComponent<ParticleSystem>();
+
+        Debug.Log("PS = " + ps);
     }
 
     public void SetPotassium()
     {
-        var main = ps.main;
+        Debug.Log("SetPotassium");
 
-        // Lilac
+        if (ps == null)
+        {
+            Debug.LogError("PS NULL");
+            return;
+        }
+
+        var main = ps.main;
         main.startColor = new Color(0.85f, 0.65f, 1.0f);
     }
 
     public void SetBarium()
     {
-        var main = ps.main;
+        Debug.Log("SetBarium");
 
-        // Apple Green
+        if (ps == null)
+        {
+            Debug.LogError("PS NULL");
+            return;
+        }
+
+        var main = ps.main;
         main.startColor = new Color(0.6f, 1.0f, 0.2f);
     }
 
     public void SetCalcium()
     {
-        var main = ps.main;
+        Debug.Log("SetCalcium");
 
-        // Bright Orange-Red
+        if (ps == null)
+        {
+            Debug.LogError("PS NULL");
+            return;
+        }
+
+        var main = ps.main;
         main.startColor = new Color(0.67f, 0.29f, 0.27f);
     }
 
     public void ResetFlame()
     {
+        Debug.Log("ResetFlame");
+
+        if (ps == null)
+        {
+            Debug.LogError("PS NULL");
+            return;
+        }
+
         var main = ps.main;
 
-        // Original burner blue
         main.startColor = new Color(
             11f / 255f,
             73f / 255f,
