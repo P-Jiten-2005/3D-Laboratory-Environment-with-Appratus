@@ -10,7 +10,9 @@ public class PaperSpawner : MonoBehaviour
     public void SpawnPaper()
     {
         if (currentPaper != null)
+        {
             return;
+        }
 
         currentPaper = Instantiate(
             paperPrefab,

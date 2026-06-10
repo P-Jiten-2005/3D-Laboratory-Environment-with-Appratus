@@ -6,7 +6,6 @@ public class PHPaperBehaviour : MonoBehaviour
     private Renderer paperRenderer;
 
     // Drag NaOH_ResultPanel here in Inspector
-    public NaOHResultPanel resultPanel;
 
     private bool alreadyDipped = false;
 
@@ -39,14 +38,13 @@ public class PHPaperBehaviour : MonoBehaviour
         // Change paper color
         paperRenderer.material.color = GetPHColor(chemData.pHValue);
 
-        // Show result panel
-        if (resultPanel != null)
+        if (chemData.resultPanel != null)
         {
-            resultPanel.ShowPanel();
+            chemData.resultPanel.ShowPanel();
         }
         else
         {
-            Debug.LogWarning("Result Panel not assigned!");
+            Debug.LogWarning("No Result Panel assigned in LabItemData");
         }
         Invoke(nameof(RemovePaper), 5f);
     }
@@ -69,7 +67,8 @@ public class PHPaperBehaviour : MonoBehaviour
     }
     void RemovePaper()
     {
-        PaperSpawner spawner = FindFirstObjectByType<PaperSpawner>();
+        PaperSpawner spawner =
+            FindFirstObjectByType<PaperSpawner>();
 
         if (spawner != null)
         {
