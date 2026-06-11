@@ -2,39 +2,44 @@ using UnityEngine;
 
 public class BeakerPouring : MonoBehaviour
 {
-    public ParticleSystem waterParticles;
-
+    [Header("Liquid References")]
+    public BeakerLiquid source;
     public LiquidTransfer transfer;
 
-    public BeakerLiquid source;
+    [Header("Visual Stream")]
+    public GameObject waterStream;
 
+    [Header("Pour Settings")]
     public float pourAngle = 60f;
 
     void Update()
     {
-        // Stop everything if empty
+        // Stop pouring if source is empty
         if (source.fillAmount <= 0f)
         {
-            if (waterParticles.isPlaying)
-                waterParticles.Stop();
+            if (waterStream.activeSelf)
+                waterStream.SetActive(false);
 
             transfer.isPouring = false;
             return;
         }
 
+        // Calculate tilt angle
         float angle = Vector3.Angle(transform.up, Vector3.up);
 
+        // Start pouring
         if (angle > pourAngle)
         {
-            if (!waterParticles.isPlaying)
-                waterParticles.Play();
+            if (!waterStream.activeSelf)
+                waterStream.SetActive(true);
 
             transfer.isPouring = true;
         }
+        // Stop pouring
         else
         {
-            if (waterParticles.isPlaying)
-                waterParticles.Stop();
+            if (waterStream.activeSelf)
+                waterStream.SetActive(false);
 
             transfer.isPouring = false;
         }
