@@ -2,24 +2,39 @@ using UnityEngine;
 
 public class BeakerPouring : MonoBehaviour
 {
-    [Header("Liquid References")]
+    [Header("References")]
     public BeakerLiquid source;
     public LiquidTransfer transfer;
-
-    [Header("Visual Stream")]
-    public GameObject waterStream;
+    public LineRenderer waterStream;
 
     [Header("Pour Settings")]
     public float pourAngle = 60f;
 
     void Update()
     {
-        // Stop pouring if source is empty
+        // Safety checks
+        if (source == null)
+        {
+            Debug.LogError("Source BeakerLiquid not assigned!");
+            return;
+        }
+
+        if (transfer == null)
+        {
+            Debug.LogError("LiquidTransfer not assigned!");
+            return;
+        }
+
+        if (waterStream == null)
+        {
+            Debug.LogError("WaterStream LineRenderer not assigned!");
+            return;
+        }
+
+        // Stop if source is empty
         if (source.fillAmount <= 0f)
         {
-            if (waterStream.activeSelf)
-                waterStream.SetActive(false);
-
+            waterStream.enabled = false;
             transfer.isPouring = false;
             return;
         }
@@ -27,20 +42,20 @@ public class BeakerPouring : MonoBehaviour
         // Calculate tilt angle
         float angle = Vector3.Angle(transform.up, Vector3.up);
 
-        // Start pouring
+        // Debug
+        Debug.Log("Current Angle = " + angle);
+
+        // Check if flask is tilted enough
         if (angle > pourAngle)
         {
-            if (!waterStream.activeSelf)
-                waterStream.SetActive(true);
-
+            waterStream.enabled = true;
             transfer.isPouring = true;
+
+            Debug.Log("POURING");
         }
-        // Stop pouring
         else
         {
-            if (waterStream.activeSelf)
-                waterStream.SetActive(false);
-
+            waterStream.enabled = false;
             transfer.isPouring = false;
         }
     }
