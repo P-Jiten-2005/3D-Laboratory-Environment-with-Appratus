@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class TubeMouthTrigger : MonoBehaviour
+public class TubeTrigger : MonoBehaviour
 {
     public TestTubePH testTube;
-}
+}   
