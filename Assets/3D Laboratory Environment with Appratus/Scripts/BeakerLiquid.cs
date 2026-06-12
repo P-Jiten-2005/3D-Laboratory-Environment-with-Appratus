@@ -9,6 +9,9 @@ public class BeakerLiquid : MonoBehaviour
 
     void Update()
     {
-        liquidMaterial.SetFloat("FillVolume", fillAmount);
+        if (liquidMaterial != null)
+        {
+            liquidMaterial.SetFloat("FillVolume", fillAmount);
+        }
     }
 }
