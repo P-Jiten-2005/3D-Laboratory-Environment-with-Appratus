@@ -6749,6 +6749,9 @@ PrefabInstance:
     m_AddedGameObjects:
     - targetCorrespondingSourceObject: {fileID: 8863357636113234279, guid: e833bb11c8758f44a98ec0e99fba76d9, type: 3}
       insertIndex: -1
+      addedObject: {fileID: 1177465568}
+    - targetCorrespondingSourceObject: {fileID: 8863357636113234279, guid: e833bb11c8758f44a98ec0e99fba76d9, type: 3}
+      insertIndex: -1
       addedObject: {fileID: 932679412}
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 8091605564447400925, guid: e833bb11c8758f44a98ec0e99fba76d9, type: 3}
@@ -20560,7 +20563,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::WaterStreamRenderer
   startPoint: {fileID: 504363864}
   endPoint: {fileID: 1801989726}
+  sourceLiquid: {fileID: 0}
   segments: 20
+  curveAmount: 0.2
+  minWidth: 0.005
+  maxWidth: 0.03
 --- !u!1 &789267031
 GameObject:
   m_ObjectHideFlags: 0
@@ -33963,6 +33970,59 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 981368d7116284b499cd25993804b250, type: 3}
+--- !u!1 &1177465567
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1177465568}
+  - component: {fileID: 1177465569}
+  m_Layer: 0
+  m_Name: ReactionZone
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1177465568
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1177465567}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0.005300045, y: 0.026000023, z: -0.010000229}
+  m_LocalScale: {x: 0.11, y: 0.015, z: 0.11}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 325254150}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!135 &1177465569
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1177465567}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Radius: 0.5
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!64 &1177490562
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -40166,8 +40226,8 @@ Transform:
   m_GameObject: {fileID: 1462126822}
   serializedVersion: 2
   m_LocalRotation: {x: 0.9998918, y: -1.1264348e-16, z: 1.0937707e-16, w: 0.014710675}
-  m_LocalPosition: {x: -0.0026, y: -0.0584, z: 0.0031}
-  m_LocalScale: {x: 0.01, y: 0.04, z: 0.01}
+  m_LocalPosition: {x: -0.0036, y: -0.0558, z: 0.003}
+  m_LocalScale: {x: 0.001, y: 0.04, z: 0.001}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 366911991}
@@ -40220,7 +40280,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 31321ba15b8f8eb4c954353edc038b1d, type: 2}
+  - {fileID: 2100000, guid: d987ec024d9a90d4c8deb0ba94e48b99, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -40440,6 +40500,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1482079514}
+  - component: {fileID: 1482079515}
   m_Layer: 0
   m_Name: DropSpawnPoint
   m_TagString: Untagged
@@ -40455,13 +40516,26 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1482079513}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.0019, y: 0.0113, z: 0.004}
+  m_LocalRotation: {x: 0.000000043711356, y: -4.8529354e-24, z: -0, w: 1}
+  m_LocalPosition: {x: -0.0019000102, y: 0.011299996, z: 0.0039999806}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 366911991}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1482079515
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1482079513}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0b2149eb7110ba54eb99d6aee89fb2cc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::DropSpawner
+  acidDropPrefab: {fileID: 4916064126787266677, guid: 7bb8cd22fbec0484b8eec5b8f48ae1d8, type: 3}
 --- !u!1 &1484255543
 GameObject:
   m_ObjectHideFlags: 0
