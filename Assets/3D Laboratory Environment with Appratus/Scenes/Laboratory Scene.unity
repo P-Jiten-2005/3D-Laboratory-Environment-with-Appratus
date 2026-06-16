@@ -19679,7 +19679,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::WaterStreamRenderer
   startPoint: {fileID: 504363864}
   endPoint: {fileID: 1801989726}
+  sourceLiquid: {fileID: 5921647626190766171}
   segments: 20
+  curveAmount: 0.2
+  minWidth: 0.005
+  maxWidth: 0.03
 --- !u!1 &791585279
 GameObject:
   m_ObjectHideFlags: 0
@@ -20813,7 +20817,7 @@ Transform:
   m_GameObject: {fileID: 858984072}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 4.324, y: 1.035, z: 5.37}
+  m_LocalPosition: {x: 4.324, y: 1.014, z: 5.37}
   m_LocalScale: {x: 1.4037, y: 1.4037, z: 1.4037}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -53652,7 +53656,7 @@ Transform:
   m_GameObject: {fileID: 919132148719572026}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 4.613, y: 1.018, z: 5.372}
+  m_LocalPosition: {x: 4.613, y: 1.011, z: 5.372}
   m_LocalScale: {x: 1.4037, y: 1.4037, z: 1.4037}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -69637,7 +69641,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8505032083176376874, guid: 24c728c68968f6447b856666f27564a5, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1.039
+      value: 1.013
       objectReference: {fileID: 0}
     - target: {fileID: 8505032083176376874, guid: 24c728c68968f6447b856666f27564a5, type: 3}
       propertyPath: m_LocalPosition.z
@@ -70517,7 +70521,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5468512139057648038, guid: cbb3159864b0a1348ab992ae9813d64d, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1.032
+      value: 1.007
       objectReference: {fileID: 0}
     - target: {fileID: 5468512139057648038, guid: cbb3159864b0a1348ab992ae9813d64d, type: 3}
       propertyPath: m_LocalPosition.z
