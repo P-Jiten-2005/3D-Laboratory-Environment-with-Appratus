@@ -12,6 +12,7 @@ TagManager:
   - ChemSocket
   - Spoon
   - RightHand
+  - AcidDrop
   layers:
   - Default
   - TransparentFX
