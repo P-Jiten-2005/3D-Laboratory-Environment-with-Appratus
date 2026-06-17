@@ -8,9 +8,9 @@ public class ReactionZone : MonoBehaviour
     {
         if (other.CompareTag("AcidDrop"))
         {
-            Debug.Log("DESTROYING: " + other.name);
-
             dropCount++;
+
+            Debug.Log("Drop Count = " + dropCount);
 
             TitrationManager.Instance.AddDrop();
 
