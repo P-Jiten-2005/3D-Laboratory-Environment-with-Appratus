@@ -4,25 +4,21 @@ public class LiquidColorController : MonoBehaviour
 {
     public Renderer liquidRenderer;
 
-    public Color startColor =
-        new Color(1f, 0.4f, 0.8f, 0.5f);
-
-    public Color endColor =
-        new Color(1f, 1f, 1f, 0.15f);
+    private Color startColor = new Color(1f, 0f, 1f); // Pink
+    private Color endColor = Color.white;             // Colorless approximation
 
     void Update()
     {
-        float current =
-            TitrationManager.Instance.currentVolume;
+        if (TitrationManager.Instance == null)
+            return;
 
-        float endpoint =
-            TitrationManager.Instance.endpointVolume;
+        float currentVolume = TitrationManager.Instance.currentVolume;
+        float endpointVolume = TitrationManager.Instance.endpointVolume;
 
-        float t = Mathf.Clamp01(current / endpoint);
+        float t = Mathf.Clamp01(currentVolume / endpointVolume);
 
-        liquidRenderer.material.SetColor(
-            "_BaseColor",
-            Color.Lerp(startColor, endColor, t)
-        );
+        Color currentColor = Color.Lerp(startColor, endColor, t);
+
+        liquidRenderer.material.color = currentColor;
     }
 }
