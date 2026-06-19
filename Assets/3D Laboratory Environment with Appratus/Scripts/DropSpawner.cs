@@ -10,6 +10,10 @@ public class DropSpawner : MonoBehaviour
 
     void Update()
     {
+        // Switch OFF unte drops ravu
+        if (!BuretteSwitch.IsOpen)
+            return;
+
         timer += Time.deltaTime;
 
         if (timer >= dropInterval)
