@@ -1,19 +1,31 @@
 using UnityEngine;
 
 [RequireComponent(typeof(LineRenderer))]
-public class WaterStreamRenderer : MonoBehaviour
+public class WaterStream : MonoBehaviour
 {
-    private LineRenderer lr;
-
     public Transform startPoint;
     public Transform endPoint;
 
-    void Awake()
+    private LineRenderer lr;
+
+    private void Awake()
     {
         lr = GetComponent<LineRenderer>();
 
         lr.positionCount = 2;
         lr.enabled = false;
+    }
+
+    private void Update()
+    {
+        if (!lr.enabled)
+            return;
+
+        if (startPoint == null || endPoint == null)
+            return;
+
+        lr.SetPosition(0, startPoint.position);
+        lr.SetPosition(1, endPoint.position);
     }
 
     public void ShowStream()
@@ -24,17 +36,5 @@ public class WaterStreamRenderer : MonoBehaviour
     public void HideStream()
     {
         lr.enabled = false;
-    }
-
-    void Update()
-    {
-        if (!lr.enabled)
-            return;
-
-        if (startPoint == null || endPoint == null)
-            return;
-
-        lr.SetPosition(0, startPoint.position);
-        lr.SetPosition(1, endPoint.position);
     }
 }

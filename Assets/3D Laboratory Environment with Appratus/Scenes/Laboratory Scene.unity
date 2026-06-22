@@ -5420,6 +5420,84 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!1001 &206690077
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 1221165236}
+    m_Modifications:
+    - target: {fileID: 100000, guid: af2b51c3bf3f5824799712924b32d482, type: 3}
+      propertyPath: m_Name
+      value: Liquid
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: af2b51c3bf3f5824799712924b32d482, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: af2b51c3bf3f5824799712924b32d482, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: af2b51c3bf3f5824799712924b32d482, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: af2b51c3bf3f5824799712924b32d482, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: af2b51c3bf3f5824799712924b32d482, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: af2b51c3bf3f5824799712924b32d482, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: af2b51c3bf3f5824799712924b32d482, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: af2b51c3bf3f5824799712924b32d482, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: af2b51c3bf3f5824799712924b32d482, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: af2b51c3bf3f5824799712924b32d482, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: af2b51c3bf3f5824799712924b32d482, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: af2b51c3bf3f5824799712924b32d482, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: af2b51c3bf3f5824799712924b32d482, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2300000, guid: af2b51c3bf3f5824799712924b32d482, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 069c2b97227bfd34f97ffe23a66b171f, type: 2}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: af2b51c3bf3f5824799712924b32d482, type: 3}
+--- !u!4 &206690078 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 400000, guid: af2b51c3bf3f5824799712924b32d482, type: 3}
+  m_PrefabInstance: {fileID: 206690077}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &210225400
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -20401,7 +20479,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 783800739}
-  - component: {fileID: 783800741}
   - component: {fileID: 783800740}
   m_Layer: 0
   m_Name: WaterStream
@@ -20580,25 +20657,6 @@ LineRenderer:
   m_UseWorldSpace: 1
   m_Loop: 0
   m_ApplyActiveColorSpace: 1
---- !u!114 &783800741
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 783800738}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6e82eb3292c827040948026976c663ee, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::WaterStreamRenderer
-  startPoint: {fileID: 504363864}
-  endPoint: {fileID: 1801989726}
-  sourceLiquid: {fileID: 0}
-  segments: 20
-  curveAmount: 0.2
-  minWidth: 0.005
-  maxWidth: 0.03
 --- !u!1 &789267031
 GameObject:
   m_ObjectHideFlags: 0
@@ -21777,7 +21835,6 @@ GameObject:
   - component: {fileID: 858984076}
   - component: {fileID: 858984075}
   - component: {fileID: 858984074}
-  - component: {fileID: 858984073}
   m_Layer: 0
   m_Name: Conical_Flask(shaders)target
   m_TagString: Untagged
@@ -21785,20 +21842,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 64
   m_IsActive: 1
---- !u!114 &858984073
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 858984072}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 06ed315c570dec04b906fab594b2fb3e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::BeakerLiquid
-  liquidMaterial: {fileID: 2100000, guid: 9030c1b3c60634348ab35d12a0ed45ca, type: 2}
-  fillAmount: 0.5
 --- !u!136 &858984074
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -23339,7 +23382,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 904130898}
-  - component: {fileID: 904130897}
   m_Layer: 0
   m_Name: LiquidManager
   m_TagString: Untagged
@@ -23347,22 +23389,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &904130897
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 904130896}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d7b8477bfac247c4fbb388bfa3b07c69, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::LiquidTransfer
-  source: {fileID: 5921647626190766171}
-  target: {fileID: 858984073}
-  transferRate: 0.2
-  isPouring: 1
 --- !u!4 &904130898
 Transform:
   m_ObjectHideFlags: 0
@@ -34997,6 +35023,87 @@ Transform:
   - {fileID: 553550786}
   m_Father: {fileID: 1724223382}
   m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
+--- !u!1001 &1221165235
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 100000, guid: af2b51c3bf3f5824799712924b32d482, type: 3}
+      propertyPath: m_Name
+      value: flask
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: af2b51c3bf3f5824799712924b32d482, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 62.662346
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: af2b51c3bf3f5824799712924b32d482, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 62.662346
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: af2b51c3bf3f5824799712924b32d482, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 62.662346
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: af2b51c3bf3f5824799712924b32d482, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 3.709
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: af2b51c3bf3f5824799712924b32d482, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 1.272
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: af2b51c3bf3f5824799712924b32d482, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 5.337
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: af2b51c3bf3f5824799712924b32d482, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: af2b51c3bf3f5824799712924b32d482, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: af2b51c3bf3f5824799712924b32d482, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: af2b51c3bf3f5824799712924b32d482, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: af2b51c3bf3f5824799712924b32d482, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: -90
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: af2b51c3bf3f5824799712924b32d482, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: af2b51c3bf3f5824799712924b32d482, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2300000, guid: af2b51c3bf3f5824799712924b32d482, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: -6440753879446025210, guid: d8dfe177518de51419328aa0fbbb7dfc, type: 3}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects:
+    - targetCorrespondingSourceObject: {fileID: 400000, guid: af2b51c3bf3f5824799712924b32d482, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 206690078}
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: af2b51c3bf3f5824799712924b32d482, type: 3}
+--- !u!4 &1221165236 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 400000, guid: af2b51c3bf3f5824799712924b32d482, type: 3}
+  m_PrefabInstance: {fileID: 1221165235}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1229899349
 GameObject:
   m_ObjectHideFlags: 0
@@ -37695,7 +37802,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9028627854349766800, guid: 24c728c68968f6447b856666f27564a5, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 9028627854349766800, guid: 24c728c68968f6447b856666f27564a5, type: 3}
       propertyPath: m_StaticEditorFlags
@@ -43080,7 +43187,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: ffad09fc807174544874a365c124edc4, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: ffad09fc807174544874a365c124edc4, type: 3}
       propertyPath: m_StaticEditorFlags
@@ -59402,8 +59509,6 @@ GameObject:
   - component: {fileID: 425393119}
   - component: {fileID: 425393118}
   - component: {fileID: 425393125}
-  - component: {fileID: 5921647626190766171}
-  - component: {fileID: 5921647626190766170}
   m_Layer: 0
   m_Name: Conical_Flask(shaders)source
   m_TagString: Untagged
@@ -78241,7 +78346,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 64
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!54 &5462564426370213480
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -79597,36 +79702,6 @@ MeshCollider:
   m_Convex: 1
   m_CookingOptions: 30
   m_Mesh: {fileID: 5500921399522267773, guid: 2d6b31bbb0cc4d74f9eb0dcbe73380be, type: 3}
---- !u!114 &5921647626190766170
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 919132148719572026}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 94b42c0b96a8fa145a8e87f1ac18fd3b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::BeakerPouring
-  source: {fileID: 5921647626190766171}
-  transfer: {fileID: 904130897}
-  waterStream: {fileID: 783800740}
-  pourAngle: 60
---- !u!114 &5921647626190766171
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 919132148719572026}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 06ed315c570dec04b906fab594b2fb3e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::BeakerLiquid
-  liquidMaterial: {fileID: 2100000, guid: 513cec1ae8687d84d87c2de559ccf482, type: 2}
-  fillAmount: 0.5
 --- !u!23 &5926281411967612439
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -95640,3 +95715,4 @@ SceneRoots:
   - {fileID: 366911990}
   - {fileID: 325254148}
   - {fileID: 1818554963}
+  - {fileID: 1221165235}
