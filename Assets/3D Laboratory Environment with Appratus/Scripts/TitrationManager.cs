@@ -7,6 +7,10 @@ public class TitrationManager : MonoBehaviour
     public float currentVolume = 0f;
     public float volumePerDrop = 0.1f;
 
+    public float endpointVolume = 6f;
+
+    private bool endpointReached = false;
+
     private void Awake()
     {
         Instance = this;
@@ -16,6 +20,12 @@ public class TitrationManager : MonoBehaviour
     {
         currentVolume += volumePerDrop;
 
-        Debug.Log("Volume: " + currentVolume.ToString("F1") + " mL");
+        if (!endpointReached &&
+           currentVolume >= endpointVolume)
+        {
+            endpointReached = true;
+
+            Debug.Log("ENDPOINT REACHED!");
+        }
     }
 }
