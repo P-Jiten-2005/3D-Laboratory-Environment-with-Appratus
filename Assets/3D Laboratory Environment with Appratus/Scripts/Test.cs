@@ -1,31 +1,22 @@
 using UnityEngine;
 
-public class BeakerLiquid : MonoBehaviour
+public class Test : MonoBehaviour
 {
     [Range(0f, 1f)]
     public float fillAmount = 0.5f;
 
-    [Header("Liquid Object")]
     public Transform liquid;
 
-    [Header("Liquid Height")]
     public float minY = -0.05f;
     public float maxY = 0.05f;
 
-    void Update()
-    {
-        UpdateLiquidVisual();
-    }
-
-    void UpdateLiquidVisual()
+    private void Update()
     {
         if (liquid == null)
             return;
 
         Vector3 pos = liquid.localPosition;
-
         pos.y = Mathf.Lerp(minY, maxY, fillAmount);
-
         liquid.localPosition = pos;
     }
 }

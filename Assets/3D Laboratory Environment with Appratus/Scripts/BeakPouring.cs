@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class BeakerPouring : MonoBehaviour
+public class BeakPouring : MonoBehaviour
 {
     public float pourAngle = 50f;
 

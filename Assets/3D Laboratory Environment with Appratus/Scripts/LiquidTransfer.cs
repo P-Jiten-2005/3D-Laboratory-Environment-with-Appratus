@@ -2,51 +2,46 @@ using UnityEngine;
 
 public class LiquidTransfer : MonoBehaviour
 {
-    [Header("Source Flask")]
+    [Header("References")]
     public BeakerLiquid source;
-
-    [Header("Target Flask")]
     public BeakerLiquid target;
 
-    [Header("Transfer Settings")]
-    public float transferRate = 0.2f;
+    public BeakerPouring sourcePouring;
 
-    [HideInInspector]
-    public bool isPouring = false;
+    public WaterStreamRenderer stream;
+
+    [Header("Transfer")]
+    public float transferRate = 0.15f;
 
     void Update()
     {
-        if (!isPouring)
-            return;
+        bool pouring = sourcePouring.IsPouring();
 
-        if (source == null || target == null)
+        if (pouring &&
+            source.fillAmount > 0 &&
+            target.fillAmount < 1)
         {
-            Debug.LogError("Source or Target not assigned!");
-            return;
-        }
+            TransferLiquid();
 
+            stream.ShowStream();
+        }
+        else
+        {
+            stream.HideStream();
+        }
+    }
+
+    void TransferLiquid()
+    {
         float amount = transferRate * Time.deltaTime;
 
         source.fillAmount -= amount;
         target.fillAmount += amount;
 
-        source.fillAmount = Mathf.Clamp01(source.fillAmount);
-        target.fillAmount = Mathf.Clamp01(target.fillAmount);
+        source.fillAmount =
+            Mathf.Clamp01(source.fillAmount);
 
-        Debug.Log(
-            $"Source={source.fillAmount:F2} Target={target.fillAmount:F2}"
-        );
-
-        if (source.fillAmount <= 0f)
-        {
-            source.fillAmount = 0f;
-            isPouring = false;
-        }
-
-        if (target.fillAmount >= 1f)
-        {
-            target.fillAmount = 1f;
-            isPouring = false;
-        }
+        target.fillAmount =
+            Mathf.Clamp01(target.fillAmount);
     }
 }
