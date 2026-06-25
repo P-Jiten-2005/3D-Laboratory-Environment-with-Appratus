@@ -3,23 +3,16 @@ using UnityEngine;
 public class DropSpawner : MonoBehaviour
 {
     public GameObject acidDropPrefab;
+    public float dropInterval = 0.3f;
 
-    public float dropInterval = 1f;
-
-    private float timer;
+    private float timer = 0f;
 
     void Update()
     {
-        // Switch OFF unte drops ravu
-        if (!BuretteSwitch.IsOpen)
-            return;
-
         timer += Time.deltaTime;
 
         if (timer >= dropInterval)
         {
-            Debug.Log("Spawning Drop");
-
             Instantiate(
                 acidDropPrefab,
                 transform.position,
