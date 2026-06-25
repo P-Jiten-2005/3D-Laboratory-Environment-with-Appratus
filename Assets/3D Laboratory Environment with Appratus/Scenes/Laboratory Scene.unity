@@ -11023,14 +11023,14 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 504363863}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: 0, y: 0.7071068, z: -0, w: -0.7071068}
   m_LocalPosition: {x: -0.0009, y: 0.184, z: -0.0019}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 533528886}
   m_Father: {fileID: 543450652926414464}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 270, z: 0}
 --- !u!1 &504762505 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1767192433, guid: f6336ac4ac8b4d34bc5072418cdc62a0, type: 3}
@@ -22442,6 +22442,7 @@ GameObject:
   m_Component:
   - component: {fileID: 783800739}
   - component: {fileID: 783800740}
+  - component: {fileID: 783800741}
   m_Layer: 0
   m_Name: WaterStream
   m_TagString: Untagged
@@ -22619,6 +22620,20 @@ LineRenderer:
   m_UseWorldSpace: 1
   m_Loop: 0
   m_ApplyActiveColorSpace: 1
+--- !u!114 &783800741
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 783800738}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 92cb9fec1b3e8d841847217111219b49, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::WaterStream
+  startPoint: {fileID: 504363864}
+  endPoint: {fileID: 1801989726}
 --- !u!1 &789267031
 GameObject:
   m_ObjectHideFlags: 0
@@ -23701,6 +23716,59 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 844196768}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1 &847288133
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 847288134}
+  - component: {fileID: 847288135}
+  m_Layer: 8
+  m_Name: ReceiverZone
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &847288134
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 847288133}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -0.0012, y: 0.1844, z: -0.002}
+  m_LocalScale: {x: 0.06, y: 0.03, z: 0.06}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 858984080}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!65 &847288135
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 847288133}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &848894138
 GameObject:
   m_ObjectHideFlags: 0
@@ -23863,6 +23931,7 @@ GameObject:
   - component: {fileID: 858984076}
   - component: {fileID: 858984075}
   - component: {fileID: 858984074}
+  - component: {fileID: 858984081}
   m_Layer: 0
   m_Name: Conical_Flask(shaders)target
   m_TagString: Untagged
@@ -24143,8 +24212,25 @@ Transform:
   m_Children:
   - {fileID: 1179607605}
   - {fileID: 1801989726}
+  - {fileID: 847288134}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &858984081
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 858984072}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1c5609b20c93784419d69521cde3f68b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::BeakLiquid
+  fillAmount: 0.5
+  liquid: {fileID: 1179607605}
+  minY: -0.05
+  maxY: 0.05
 --- !u!1001 &865206337
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -25230,6 +25316,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 904130898}
+  - component: {fileID: 904130899}
   m_Layer: 0
   m_Name: LiquidManager
   m_TagString: Untagged
@@ -25252,6 +25339,28 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &904130899
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 904130896}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a523ad4e76f32484e8573013560fcee7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::LiqTransfer
+  source: {fileID: 5921647626190766171}
+  target: {fileID: 858984081}
+  sourcePouring: {fileID: 5921647626190766170}
+  stream: {fileID: 783800741}
+  pourPoint: {fileID: 504363864}
+  receiverLayer:
+    serializedVersion: 2
+    m_Bits: 256
+  maxDistance: 0.5
+  transferRate: 0.15
 --- !u!1 &906935766
 GameObject:
   m_ObjectHideFlags: 0
@@ -36747,7 +36856,7 @@ GameObject:
   - component: {fileID: 1179607607}
   - component: {fileID: 1179607606}
   m_Layer: 0
-  m_Name: Liquid
+  m_Name: Liquidsss
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -66148,6 +66257,8 @@ GameObject:
   - component: {fileID: 425393119}
   - component: {fileID: 425393118}
   - component: {fileID: 425393125}
+  - component: {fileID: 5921647626190766171}
+  - component: {fileID: 5921647626190766170}
   m_Layer: 0
   m_Name: Conical_Flask(shaders)source
   m_TagString: Untagged
@@ -86341,6 +86452,35 @@ MeshCollider:
   m_Convex: 1
   m_CookingOptions: 30
   m_Mesh: {fileID: 5500921399522267773, guid: 2d6b31bbb0cc4d74f9eb0dcbe73380be, type: 3}
+--- !u!114 &5921647626190766170
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 919132148719572026}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fd5a88e77246dc547b2d2662c24a4d5f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::BeakPouring
+  pourAngle: 50
+--- !u!114 &5921647626190766171
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 919132148719572026}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1c5609b20c93784419d69521cde3f68b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::BeakLiquid
+  fillAmount: 0.8
+  liquid: {fileID: 9150597809781308271}
+  minY: -0.05
+  maxY: 0.05
 --- !u!23 &5926281411967612439
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -99379,7 +99519,7 @@ GameObject:
   - component: {fileID: 3123851488564852150}
   - component: {fileID: 332452529}
   m_Layer: 0
-  m_Name: Liquid
+  m_Name: Liquidss
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
