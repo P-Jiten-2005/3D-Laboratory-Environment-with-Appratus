@@ -58,6 +58,7 @@ public class LiqTransfer : MonoBehaviour
             receiverLayer))
         {
             targetDetected = true;
+            Debug.Log("Target Detected");
         }
         else
         {
@@ -77,6 +78,7 @@ public class LiqTransfer : MonoBehaviour
 
         target.fillAmount =
             Mathf.Clamp01(target.fillAmount);
+        Debug.Log("Pouring");
     }
 
     private void OnDrawGizmos()
