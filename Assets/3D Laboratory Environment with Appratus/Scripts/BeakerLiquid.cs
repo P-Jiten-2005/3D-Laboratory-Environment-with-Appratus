@@ -2,30 +2,34 @@ using UnityEngine;
 
 public class BeakerLiquid : MonoBehaviour
 {
-    [Range(0f, 1f)]
-    public float fillAmount = 0.5f;
+    public ChemicalType chemicalType;
 
-    [Header("Liquid Object")]
-    public Transform liquid;
+    [Range(0,1)]
+    public float fillAmount = 1f;
 
-    [Header("Liquid Height")]
-    public float minY = -0.05f;
-    public float maxY = 0.05f;
+    public Renderer liquidRenderer;
 
-    void Update()
+    public Material copperMaterial;
+    public Material ammoniaMaterial;
+    public Material mixedMaterial;
+
+    void Start()
     {
-        UpdateLiquidVisual();
+        UpdateMaterial();
     }
 
-    void UpdateLiquidVisual()
+    public void UpdateMaterial()
     {
-        if (liquid == null)
-            return;
+        if (chemicalType == ChemicalType.CopperSulfate)
+            liquidRenderer.material = copperMaterial;
 
-        Vector3 pos = liquid.localPosition;
+        else if (chemicalType == ChemicalType.Ammonia)
+            liquidRenderer.material = ammoniaMaterial;
+    }
 
-        pos.y = Mathf.Lerp(minY, maxY, fillAmount);
-
-        liquid.localPosition = pos;
+    public void SetMixed()
+    {
+        chemicalType = ChemicalType.None;
+        liquidRenderer.material = mixedMaterial;
     }
 }
