@@ -4,14 +4,15 @@ public class LiquidColorController : MonoBehaviour
 {
     public Renderer liquidRenderer;
 
-    private Material liquidMaterial;
-
     private Color startColor = new Color(1f, 0f, 1f);
     private Color endColor = Color.white;
 
     void Start()
     {
-        liquidMaterial = liquidRenderer.material;
+        if (liquidRenderer != null)
+        {
+            liquidRenderer.material.color = startColor;
+        }
     }
 
     void Update()
@@ -26,9 +27,6 @@ public class LiquidColorController : MonoBehaviour
 
         Color currentColor = Color.Lerp(startColor, endColor, t);
 
-        liquidMaterial.color = currentColor;
-
-        Debug.Log("Current Volume = " + currentVolume);
-        Debug.Log("Current Color = " + currentColor);
+        liquidRenderer.material.color = currentColor;
     }
 }
