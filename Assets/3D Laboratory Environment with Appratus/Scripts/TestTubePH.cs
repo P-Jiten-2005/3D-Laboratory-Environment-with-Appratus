@@ -23,23 +23,23 @@ public class TestTubePH : MonoBehaviour
     Color GetPHColor()
     {
         if (pH <= 2)
-            return Color.red;
+            return new Color(0.56f, 0f, 1f); // Violet (V)
 
         if (pH <= 4)
-            return new Color(1f, 0.2f, 0.6f);
+            return new Color(0.29f, 0f, 0.51f); // Indigo (I)
 
         if (pH <= 6)
-            return new Color(0.6f, 0f, 1f);
+            return Color.blue; // Blue (B)
 
         if (pH <= 7)
-            return Color.blue;
+            return Color.green; // Green (G)
 
-        if (pH <= 9)
-            return Color.cyan;
+        if (pH <= 8)
+            return Color.yellow; // Yellow (Y)
 
-        if (pH <= 11)
-            return Color.green;
+        if (pH <= 10)
+            return new Color(1f, 0.5f, 0f); // Orange (O)
 
-        return Color.yellow;
+        return Color.red; // Red (R)
     }
 }
